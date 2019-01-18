@@ -5,13 +5,19 @@
 
 ## 2.nikto
 install
+
 docker search nikto
+
 docker pull kenney/nikto
+
 docker inspect kenney/nikto
+
 docker run --rm -t kenney/nikto:latest nikto -h www.163.com -p 443
+
 这里的–rm指的是执行完清理容器，这样就不会有日志什么的残留在主机上
 
 等待一会可以看到结果输出
+
 使用LibWhisker中对IDS的躲避技术，可使用以下几种类型：
 
 　　1. 随机URL编码(非UTF-8方式)
