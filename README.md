@@ -147,13 +147,19 @@ docker run --rm -t kenney/nikto:latest nikto -h www.163.com -p 443
 -update
 
 　　更新插件和数据库
+  
 ### 查看结果
+
 将本地目录挂载到容器中，将结果输出到该目录，使得我们能在运行结束后拿到结果
 
 docker run -v /home/root/data/:/root --rm -t kenney/nikto:latest nikto -h c.163.com -p 443 -o /root/result.html -F htm
+
 运行完后查看主机目录
 
 /home/root/data# ls -lrt
+
 total 8
+
 drwxr-xr-x 2 root root 4096 Nov  1 16:06 log
+
 -rw-r--r-- 1 root root 3825 Nov  1 19:04 result.html
