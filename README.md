@@ -1,9 +1,9 @@
 # SecTools
-## fingerSPider（RootPath） 网站指纹批量识别
-### domains.txt 要识别的网站
-### 从finger.json提取指定指纹的url
+## 1.fingerSPider（RootPath） 网站指纹批量识别
+### 0x1 domains.txt 要识别的网站
+### 0x2 从finger.json提取指定指纹的url
 
-## nikto
+## 2.nikto
 install
 docker search nikto
 docker pull kenney/nikto
