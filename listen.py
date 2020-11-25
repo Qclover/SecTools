@@ -7,7 +7,7 @@ encoding = 'utf-8'
 BUFSIZE = 1024
  
  
-# a read thread, read data from remote
+
 class Reader(threading.Thread):
     def __init__(self, client):
         threading.Thread.__init__(self)
@@ -36,8 +36,6 @@ class Reader(threading.Thread):
         return string
  
  
-# a listen thread, listen remote connect
-# when a remote machine request to connect, it will create a read thread to handle
 class Listener(threading.Thread):
     def __init__(self, port):
         threading.Thread.__init__(self)
@@ -54,8 +52,8 @@ class Listener(threading.Thread):
             cltadd = cltadd
             print("accept a connect")
  
-try: 
-    lst  = Listener(8880)   # create a listen thread
-    lst.start() # then start
-except:
-    pass
+
+port=int(input("input port:"))
+lst  = Listener(port) 
+lst.start() 
+
