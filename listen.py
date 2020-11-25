@@ -17,7 +17,7 @@ class Reader(threading.Thread):
         while True:
             data = self.client.recv(BUFSIZE)
             if(data):
-                string = data
+                string = data.decode(encoding,errors='ignore')
                 print(string)
             else:
                 break
@@ -55,7 +55,7 @@ class Listener(threading.Thread):
             print("accept a connect")
  
 try: 
-    lst  = Listener(9018)   # create a listen thread
+    lst  = Listener(8880)   # create a listen thread
     lst.start() # then start
 except:
     pass
